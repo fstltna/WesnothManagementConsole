@@ -8,7 +8,7 @@ use Term::ANSIScreen qw(cls);
 
 my $FileEditor = "/bin/nano";
 my $InitDName = "/etc/init.d/wesnoth-server";
-my $WESNOTHDIR = "/root/WesnothStartup";
+my $WESNOTHDIR = "/root/wesnoth-1.14.7";
 my $BackupCommand = "/root/WesnothBackup/wesnothbackup.pl";
 
 ###################################################
@@ -64,8 +64,8 @@ sub MainMenu
                                       '3', 'Server Console',
                                       '4', 'Turn Off Respawn',
                                       '5', 'Turn Respawn On',
-#                                      '6', 'Edit server.cfg',
-#                                      '7', 'Run a Backup',
+                                      '6', 'Edit server.cfg',
+                                      '7', 'Run a Backup',
                                       'q', 'Quit WMC' ] );
 }
 
