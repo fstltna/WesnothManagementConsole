@@ -7,15 +7,15 @@ use Term::ReadKey;
 use Term::ANSIScreen qw(cls);
 
 my $FileEditor = "/bin/nano";
-my $InitDName = "/etc/init.d/pokemononline";
+my $InitDName = "/etc/init.d/wesnoth-server";
 my $WESNOTHDIR = "/root/WesnothStartup";
-my $BackupCommand = "/root/PokemonBackup/pokemonbackup.pl";
+my $BackupCommand = "/root/WesnothBackup/wesnothbackup.pl";
 
 ###################################################
 # No changes below here
 ###################################################
 
-my $MMC_ver = "1.0.0";
+my $MMC_ver = "1.1.0";
 my $ServerStatus = "foo";
 
 my $d = new UI::Dialog ( backtitle => "Wesnoth Server Management Console v$MMC_ver", height => 20, width => 65, listheight => 5,
