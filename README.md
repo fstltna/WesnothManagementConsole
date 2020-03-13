@@ -1,4 +1,4 @@
-# Wesnoth Server Management Console (1.0.0)
+# Wesnoth Server Management Console (1.2.0)
 Allows you to manage your Wesnoth server with a text based GUI
 
 Official support sites: [Official Github Repo](https://github.com/fstltna/WesnothManagementConsole) - [Official Forum](https://wesnoth.gameplayer.club/index.php/forum/wesnoth-server-tools)  - [Official Download Area](https://wesnoth.gameplayer.club/index.php/downloads/category/5-wesnoth-server-tools)

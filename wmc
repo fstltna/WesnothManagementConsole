@@ -15,7 +15,7 @@ my $BackupCommand = "/root/WesnothBackup/wesnothbackup.pl";
 # No changes below here
 ###################################################
 
-my $MMC_ver = "1.1.0";
+my $MMC_ver = "1.2.0";
 my $ServerStatus = "foo";
 
 my $d = new UI::Dialog ( backtitle => "Wesnoth Server Management Console v$MMC_ver", height => 20, width => 65, listheight => 5,
@@ -92,7 +92,7 @@ while (-1)
 	elsif ($menuselection eq "3")
 	{
 		$d->msgbox( text => "To exit the Wesnoth Server console and return to WMC press CTRL-A CTRL-D" );
-		system("screen -r");
+		system("screen -r Wesnoth");
 	}
 	elsif ($menuselection eq "4")
 	{
