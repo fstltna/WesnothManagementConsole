@@ -6,7 +6,7 @@ Official support sites: [Official Github Repo](https://github.com/fstltna/Wesnot
 
 ---
 
-Edit "wmc" and change the settings at the top if your Wesnoth server is not in /root/WesnothStartup
+Edit "wmc" and change the settings at the top if your Wesnoth server is not in /home/wesnothowner/WesnothStartup
 
 You will need to run cpan and install these modules:
 
@@ -17,4 +17,3 @@ You will need to run cpan and install these modules:
 You also need to have my Wesnoth Server Startup Scripts and Backup Scripts installed.
 
 I suggest you add this directory to your PATH variable so you can run this script directly and can update it and use the new version easily.
-
