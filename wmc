@@ -7,8 +7,8 @@ use Term::ReadKey;
 use Term::ANSIScreen qw(cls);
 
 my $FileEditor = "/bin/nano";
-my $InitDName = "/etc/init.d/wesnoth-server";
-my $WESNOTHDIR = "/home/wesnothowner/wesnoth-1.14.7";
+my $InitDName = "/home/wesnothowner/bin/wesnoth-server";
+my $WESNOTHDIR = "/home/wesnothowner/wesnoth";
 my $BackupCommand = "/home/wesnothowner/WesnothBackup/wesnothbackup.pl";
 
 ###################################################
