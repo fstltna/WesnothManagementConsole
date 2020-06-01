@@ -59,13 +59,12 @@ sub MainMenu
 	}
 
 	$menuselection = $d->menu( title => "Main Menu", text => "Server is $ServerStatus and respawn is $WantRespawn - Select one:",
-                            list => [ '1', 'Start Server',
-                                      '2', 'Stop Server',
-                                      '3', 'Server Console',
-                                      '4', 'Turn Off Respawn',
-                                      '5', 'Turn Respawn On',
-                                      '6', 'Edit server.cfg',
-                                      '7', 'Run a Backup',
+                            list => [ '1', 'Server Console',
+                                      '2', 'Turn Off Respawn',
+                                      '3', 'Turn Respawn On',
+                                      '4', 'Edit server.cfg',
+                                      '5', 'Run a Backup',
+                                      '6', 'Reset Wesnoth Server',
                                       'q', 'Quit WMC' ] );
 }
 
@@ -77,29 +76,17 @@ while (-1)
 		$d->msgbox( title => $enjoyedtitle, text => "Thanks for using WMC..." );
 		exit 0;
 	}
-	if ($menuselection eq "1")
-	{
-		system("$InitDName start");
-	}
-	elsif ($menuselection eq "2")
-	{
-		if ($d->yesno( text => "Confirm stopping the server", text => "Are you sure you want to shut down the server?" ))
-		{
-			system("$InitDName stop");
-			sleep(5);
-		}
-	}
-	elsif ($menuselection eq "3")
+	elsif ($menuselection eq "1")
 	{
 		$d->msgbox( text => "To exit the Wesnoth Server console and return to WMC press CTRL-A CTRL-D" );
 		system("screen -r Wesnoth");
 	}
-	elsif ($menuselection eq "4")
+	elsif ($menuselection eq "2")
 	{
 		# Turn off respawn
 		system("touch $WESNOTHDIR/nostart");
 	}
-	elsif ($menuselection eq "5")
+	elsif ($menuselection eq "3")
 	{
 		# Turn respawn back on
 		if (-f "$WESNOTHDIR/nostart")
@@ -107,15 +94,23 @@ while (-1)
 			unlink("$WESNOTHDIR/nostart");
 		}
 	}
-	elsif ($menuselection eq "6")
+	elsif ($menuselection eq "4")
 	{
 		# Edit server config file
-		system("$FileEditor $WESNOTHDIR/bin/config");
+		system("$FileEditor $WESNOTHDIR/wesnothC");
 	}
-	elsif ($menuselection eq "7")
+	elsif ($menuselection eq "5")
 	{
 		# Run a backup
 		system("$BackupCommand");
+	}
+	elsif ($menuselection eq "6")
+	{
+		# Reset Wesnoth Server
+		system("$BackupCommand");
+		print "Killing Wesnoth process, please wait...\n";
+		system("killall wesnothd");
+		sleep(5);
 	}
 }
 
